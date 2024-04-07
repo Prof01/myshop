@@ -1,7 +1,11 @@
 import React from "react"
 
 
-export default function NewProductLayout({ children }) {
+export default function NewProductLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
     return (
       <div>
         <header>
