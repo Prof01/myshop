@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## MyShop
+
+This is an E-Commerce Website Build with Next.js, Typescript & Tailwind.css
+
+## Live App
+
+View Deployed Version of the App at: Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Getting Started
 
@@ -18,19 +24,82 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## More About App
 
-## Learn More
+The app does the following:
 
-To learn more about Next.js, take a look at the following resources:
+- Display List of Products
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+It renders list of products on the home page from this fake API [`https://api.escuelajs.co/api/v1/products`](https://api.escuelajs.co/api/v1/products)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Sample Response from the API
+[
+    {
+    "id": 4,
+    "title": "Handmade Fresh Table",
+    "price": 687,
+    "description": "Andy shoes are designed to keeping in...",
+    "category": {
+      "id": 5,
+      "name": "Others",
+      "image": "https://i.imgur.com/QkIa5tT.jpeg"
+    },
+    "images": [
+      "https://i.imgur.com/QkIa5tT.jpeg",
+      "https://i.imgur.com/Qphac99.jpeg",
+      "https://i.imgur.com/Qphac99.jpeg"
+    ]
+  },
+  {
 
-## Deploy on Vercel
+  }
+]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- View Product Details
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The App also allows users to view and read more about any product listed. Details of every single product is obtained from this fake API Route [`https://api.escuelajs.co/api/v1/products/${id}`](https://api.escuelajs.co/api/v1/products/1)
+
+Sample Response from the API
+{
+    "id": 4,
+    "title": "Handmade Fresh Table",
+    "price": 687,
+    "description": "Andy shoes are designed to keeping in...",
+    "category": {
+      "id": 5,
+      "name": "Others",
+      "image": "<https://i.imgur.com/QkIa5tT.jpeg>"
+    },
+    "images": [
+      "https://i.imgur.com/QkIa5tT.jpeg",
+      "https://i.imgur.com/Qphac99.jpeg",
+      "https://i.imgur.com/Qphac99.jpeg"
+    ]
+  }
+
+- Create a New Product
+
+A beautiful form is designed to allow any user to Add New Product. The form is submitted via POST request using axios to this fake API [`https://api.escuelajs.co/api/v1/products`](https://api.escuelajs.co/api/v1/products)
+
+The add new product form inputs are validated using react-hook-form vaildation to ensure all required fields are entered before sending it to the backend. This prevent unneccessary request been sent to the backend API.This saves of time and cost.
+
+If the Form is Successfully Submited. The user will be redirected to a page where the user can view more details about the product.
+
+## Likely Improvements
+
+The App is not completely functional. It's only meant for testing purposes.
+Due to timing factor, these are likely improvement to be made to it.
+
+- Product Image Carousel
+  In the Product Details page, the product image section should have been a carousel which showcase various images of the product to a user.
+  If improvement is to be done, that section should be worked out. As it's the norm of every standard e-commerce shop and also a good practice to convice customers to purchase a product.
+
+- User Authentication
+  Despite it been a test app. It's not a best practice to allow any user to add new product without any registration or signin.
+    User Registration and Sign In feature would have been added.
+
+- Buy Now or Add to Cart functionality
+
+### Open Live Website
+
+Check out the Live App at: [http://localhost:3000](http://localhost:3000) for more details.
