@@ -4,7 +4,7 @@ This is an E-Commerce Website Build with Next.js, Typescript & Tailwind.css
 
 ## Live App
 
-View Deployed Version of the App at: Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+View Deployed Version of the App at: Open [https://myshop-three-weld.vercel.app/](https://myshop-three-weld.vercel.app/) with your browser to see the result.
 
 ## Getting Started
 
@@ -102,4 +102,4 @@ Due to timing factor, these are likely improvement to be made to it.
 
 ### Open Live Website
 
-Check out the Live App at: [http://localhost:3000](http://localhost:3000) for more details.
+Check out the Live App at: [https://myshop-three-weld.vercel.app/](https://myshop-three-weld.vercel.app/) for more details.
